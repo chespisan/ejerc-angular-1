@@ -1,0 +1,25 @@
+<h1>Pagina principal</h1>
+
+<!-- directiva ngTemplate -->
+
+<!-- <div *ngIf="identificado; else noIdentificado">
+  <h3>Estas identificado en la app</h3>
+</div>
+
+<ng-template #noIdentificado>
+  <p>No estas identificado, pulsa este boton para identificarte</p>
+  <button (click)="setIdentificado()">identificarse</button>
+</ng-template> -->
+
+<!-- directibva then ngTemplate -->
+<div *ngIf="identificar; then identificado else noIdentificado"></div>
+
+<ng-template #identificado>
+  <h3>Estas identificado</h3>
+  <button (click)="logOut()">Borrar</button>
+</ng-template>
+
+<ng-template #noIdentificado>
+  <h3>no estas identificado</h3>
+  <button (click)="setIdentificado()">identificarse</button>
+</ng-template>
